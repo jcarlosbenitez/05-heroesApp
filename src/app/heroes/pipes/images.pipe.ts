@@ -10,7 +10,7 @@ export class ImagesPipe implements PipeTransform {
   
 
   transform(heroe: Heroe): string {
-    console.log('pipe imagen')
+    // console.log('pipe imagen')
     if(!heroe.id && !heroe.alt_img){
       return `assets/no-image.png`
     }

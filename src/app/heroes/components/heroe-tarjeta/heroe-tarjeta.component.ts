@@ -14,7 +14,7 @@ export class HeroeTarjetaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.heroe)
+    // console.log(this.heroe)
   }
 
 }

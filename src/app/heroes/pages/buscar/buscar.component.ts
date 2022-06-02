@@ -29,9 +29,9 @@ export class BuscarComponent implements OnInit {
       this.heroeSeleccionado = undefined; 
       console.log('No hay valor');
     }
-    console.log(heroe);
+    
     this.termino = heroe.superhero;
-    console.log(heroe);
+    // console.log(heroe);
     this.heroesService
       .getHeroeId(heroe.id!)
       .subscribe((heroe) => (this.heroeSeleccionado = heroe));

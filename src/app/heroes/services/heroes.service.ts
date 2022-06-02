@@ -24,4 +24,17 @@ export class HeroesService {
       `${this.baseUrl}/heroes?q=${termino}&_limit=10`
     );
   }
+  agregarHeroe(heroe: Heroe): Observable<Heroe> {
+    return this.hppt.post<Heroe>(`${this.baseUrl}/heroes`,  heroe );
+  }
+
+  actualizarHeroe(heroe: Heroe): Observable<Heroe> {
+    return this.hppt.put<Heroe>(`${this.baseUrl}/heroes/${heroe.id}`, 
+      heroe,
+    );
+  }
+
+  borrarHeroe(id: string): Observable<Heroe> {
+    return this.hppt.delete<any>(`${this.baseUrl}/heroes/${id}`  );
+  }
 }
